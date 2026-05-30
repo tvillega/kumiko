@@ -54,12 +54,12 @@ dependencies {
     androidTestImplementation libs.espresso.core
     androidTestImplementation libs.ext.junit
 
-    // KitKat support
+    //noinspection UseTomlInstead,GradleDependency
     implementation 'com.google.android.material:material:1.8.0'
+    //noinspection UseTomlInstead,GradleDependency
     implementation 'androidx.appcompat:appcompat:1.6.1'
 }
 
 tasks.withType(JavaCompile).configureEach {
-    // KitKat support
     options.compilerArgs += ["-Xlint:-options"]
 }
