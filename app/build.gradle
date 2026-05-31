@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId "com.tvillega.kumiko"
-        minSdk 19
+        minSdk 23
         targetSdk 36
         versionCode 1
         versionName "0.1-alpha.1"
@@ -50,16 +50,9 @@ android {
 }
 
 dependencies {
+    implementation libs.appcompat
+    implementation libs.material
     testImplementation libs.junit
     androidTestImplementation libs.espresso.core
     androidTestImplementation libs.ext.junit
-
-    //noinspection UseTomlInstead,GradleDependency
-    implementation 'com.google.android.material:material:1.8.0'
-    //noinspection UseTomlInstead,GradleDependency
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-}
-
-tasks.withType(JavaCompile).configureEach {
-    options.compilerArgs += ["-Xlint:-options"]
 }
